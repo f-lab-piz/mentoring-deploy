@@ -1,6 +1,6 @@
 replicaCount: 3
 image:
-  tag: "prod-708b1e6f4b3b165fbecb30bc511901e0dca16d73"
+  tag: "prod-de9fd05b1b1f29b4bfd9ce57b73c15bea3cf9397"
 ingress:
   hosts:
     - host: mentoring.example.com
