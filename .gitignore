@@ -1,0 +1,27 @@
+# Helm
+*.tgz
+charts/
+.helmignore
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+
+# Secrets (should never be committed)
+secrets/
+*.key
+*.pem
+*.crt

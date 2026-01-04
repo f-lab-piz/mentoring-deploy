@@ -1,0 +1,43 @@
+replicaCount: 3
+
+image:
+  tag: "prod-latest"
+
+ingress:
+  hosts:
+    - host: api.mentoring.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls:
+    - secretName: backend-prod-tls
+      hosts:
+        - api.mentoring.example.com
+
+resources:
+  limits:
+    cpu: 1000m
+    memory: 1Gi
+  requests:
+    cpu: 500m
+    memory: 512Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 70
+
+env:
+  - name: DATABASE_URL
+    valueFrom:
+      secretKeyRef:
+        name: backend-secrets
+        key: database-url
+  - name: REDIS_URL
+    valueFrom:
+      secretKeyRef:
+        name: backend-secrets
+        key: redis-url
+  - name: ENV
+    value: "production"
