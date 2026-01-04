@@ -10,7 +10,7 @@ spec:
 
   source:
     repoURL: https://github.com/f-lab-piz/mentoring-deploy.git
-    targetRevision: main
+    targetRevision: develop
     path: helm/frontend
     helm:
       valueFiles:
