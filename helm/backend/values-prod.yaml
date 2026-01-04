@@ -1,8 +1,6 @@
 replicaCount: 3
-
 image:
-  tag: "prod-latest"
-
+  tag: "prod-708b1e6f4b3b165fbecb30bc511901e0dca16d73"
 ingress:
   hosts:
     - host: api.mentoring.example.com
@@ -13,7 +11,6 @@ ingress:
     - secretName: backend-prod-tls
       hosts:
         - api.mentoring.example.com
-
 resources:
   limits:
     cpu: 1000m
@@ -21,13 +18,11 @@ resources:
   requests:
     cpu: 500m
     memory: 512Mi
-
 autoscaling:
   enabled: true
   minReplicas: 3
   maxReplicas: 10
   targetCPUUtilizationPercentage: 70
-
 env:
   - name: DATABASE_URL
     valueFrom:
