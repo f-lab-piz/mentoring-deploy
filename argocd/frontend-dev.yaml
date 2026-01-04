@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/YOUR_GITHUB_USERNAME/mentoring-deploy.git
+    repoURL: https://github.com/f-lab-piz/mentoring-deploy.git
     targetRevision: main
     path: helm/frontend
     helm:
