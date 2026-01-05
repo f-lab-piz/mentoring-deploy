@@ -20,6 +20,6 @@ resources:
     memory: 64Mi
 env:
   - name: VITE_API_URL
-    value: "https://api-dev.mentoring.example.com"
+    value: "http://14.39.90.228:8083"
   - name: VITE_ENV
     value: "development"
