@@ -1,6 +1,6 @@
 replicaCount: 1
 image:
-  tag: "dev-10bf023fdaf563baa0bb265ea98bb020ec0ac4b4"
+  tag: "dev-39201a5262037f415ca7eb07a28e7e143645984f"
 ingress:
   hosts:
     - host: dev.mentoring.example.com
