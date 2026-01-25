@@ -2,6 +2,7 @@ replicaCount: 1
 image:
   tag: "dev-769d9038a35dcf18793916b7135ecee704799291"
 ingress:
+  enabled: false
   hosts:
     - host: dev.mentoring.example.com
       paths:
@@ -20,6 +21,6 @@ resources:
     memory: 64Mi
 env:
   - name: VITE_API_URL
-    value: "http://api-dev.mentoring.example.com:8081"
+    value: "http://localhost:8083"
   - name: VITE_ENV
     value: "development"
